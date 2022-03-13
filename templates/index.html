@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+
+
+<body>
+    <div class = "login">
+        <h1>Predict Salary Analysis</h1>
+    
+        <form action = "{{ url_for('predict')}}" method="post">
+            <label for = "runs">Runs:</label><br>
+            <input type="text" name="runs" placeholder="Runs" required="required" /><br>
+
+            <label for = "wickets">Wickets:</label><br>
+            <input type="text" name="wickets" placeholder="Wickets" required="required" /><br>
+
+            <label for = "overs">Overs:</label><br>
+            <input type="text" name="overs" placeholder="Overs" required="required" /><br>
+
+            <label for = "run_last_5">Runs in Last Five Overs:</label><br>
+            <input type="text" name="runs_last_5" placeholder="Runs in Last Five Overs" required="required" /><br>
+
+            <label for = "wickets_last_5">Wickets in Last Five Overs:</label><br>
+            <input type="text" name="wickets_last_5" placeholder="Wickets in Last Five Overs" required="required" /><br>
+
+            <label for = "striker">Striker:</label><br>
+            <input type="text" name="striker" placeholder="Striker" required="required" /><br>
+
+            <label for = "non-striker">Non Striker:</label><br>
+            <input type="text" name="non-striker" placeholder="Non Striker" required="required" /><br>
+
+            <label for = "year">Year:</label><br>
+            <input type="text" name="year" placeholder="Year" required="required" /><br>
+
+
+            <select class="form-input align-center" name="batting-team">
+                <option value="none">--- Select a Batting team ---</option>
+                <option value="bat_team_Mumbai Indians">Mumbai Indians</option>
+                <option value="bat_team_Kolkata Knight Riders">Kolkata Knight Riders</option>
+                <option value="bat_team_Chennai Super Kings">Chennai Super Kings</option>
+                <option value="bat_team_Rajasthan Royals">Rajasthan Royals</option>
+                <option value="bat_team_Kings XI Punjab">Kings XI Punjab</option>
+                <option value="bat_team_Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                <option value="bat_team_Delhi Daredevils">Delhi Daredevils</option>
+                <option value="bat_team_Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+            </select><br>
+
+            <select class="form-input align-center" name="bowling-team">
+                <option value="none">--- Select a Bowling team ---</option>
+                <option value="bowl_team_Mumbai Indians">Mumbai Indians</option>
+                <option value="bowl_team_Kolkata Knight Riders">Kolkata Knight Riders</option>
+                <option value="bowl_team_Chennai Super Kings">Chennai Super Kings</option>
+                <option value="bowl_team_Rajasthan Royals">Rajasthan Royals</option>
+                <option value="bowl_team_Kings XI Punjab">Kings XI Punjab</option>
+                <option value="bowl_team_Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                <option value="bowl_team_Delhi Daredevils">Delhi Daredevils</option>
+                <option value="bowl_team_Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+            </select><br>
+
+
+            <label for = "venue_mean_encode">Venue:</label><br>
+            <input type="text" name="venue_mean_encode" placeholder="Venue" required="required" /><br>
+
+            <label for = "batsman_mean_encode">Batsman:</label><br>
+            <input type="text" name="batsman_mean_encode" placeholder="Batsman" required="required" /><br>
+            
+      
+    
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+    
+        <br>
+        <br>
+            {{ my_prediction }}
+    </div>
+</body>
+</html>
