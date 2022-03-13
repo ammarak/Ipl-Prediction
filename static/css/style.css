@@ -1,0 +1,35 @@
+.img{
+    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpaperaccess.com%2Fipl-2021&psig=AOvVaw2pHH69mv4C1Klj5yRUYHqm&ust=1647267509533000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJD6qeqjw_YCFQAAAAAdAAAAABAT");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size : 100% 100%;
+
+  
+}
+
+.login{
+    text-align: center;
+    margin-top: 2px;
+    color: white;
+}
+
+.container{
+    margin-top: 20px;
+}
+
+.margin{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.form-input{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.venue_mean_encode{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.btn{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
