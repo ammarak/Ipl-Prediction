@@ -1,1 +1,1 @@
-web: gunicorn app : Ipl_app
+web: gunicorn app:Ipl_app
