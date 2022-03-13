@@ -28,10 +28,9 @@ def predict():
         wickets_last_5 = int(request.form['wickets_last_5'])
         striker = int(request.form['striker'])
         non_striker = int(request.form['non-striker'])
-        year = int(request.form['year'])
 
         temp_array = temp_array + [runs, wickets, overs, run_last_5, 
-        wickets_last_5, striker, non_striker, year]
+        wickets_last_5, striker, non_striker]
         
         
         batting_team = request.form['batting-team']
@@ -94,15 +93,14 @@ def predict():
         elif venue_mean_encode == "Wankhede Stadium":
             venue = 168.81402278702893
 
-        batsman_mean_encode = float(request.form['batsman_mean_encode'])
 
-        temp_array = temp_array + [venue, batsman_mean_encode]
+        temp_array = temp_array + [venue]
 
 
         data = np.array([temp_array])
         my_prediction = int(regressor.predict(data)[0])
 
-        return render_template('index.html', my_prediction = f"The Score Should be between {my_prediction-10} to {my_prediction+5} ", data = temp_array)
+        return render_template('index.html', my_prediction = f"The Score Should be between {my_prediction-5} to {my_prediction+7} ", data = temp_array)
 
 
 if __name__ == '__main__':
