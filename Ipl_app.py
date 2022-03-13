@@ -23,7 +23,7 @@ def predict():
 
         runs  = int(request.form['runs'])
         wickets = int(request.form['wickets'])
-        overs = int(request.form['overs'])
+        overs = float(request.form['overs'])
         run_last_5 = int(request.form['runs_last_5'])
         wickets_last_5 = int(request.form['wickets_last_5'])
         striker = int(request.form['striker'])
